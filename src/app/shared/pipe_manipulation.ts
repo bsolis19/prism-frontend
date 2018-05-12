@@ -41,6 +41,9 @@ export class SortPipe implements PipeTransform {
       } else if (a.title) {
         compareA = a.title.toLowerCase();
         compareB = b.title.toLowerCase();
+      } else if (a.toLowerCase()) {
+        compareA = a.toLowerCase();
+        compareB = b.toLowerCase();
       }
 
       /* Does the actual comparisons to sort */
